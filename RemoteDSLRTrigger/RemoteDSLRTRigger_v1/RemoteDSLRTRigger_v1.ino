@@ -7,19 +7,18 @@
 const int SENDING_LED_PIN = 13;
 
 // IR Control
-Pentax K20D(9); // IR Led on PIN 9
+Canon EOS70D(9); // IR Led on PIN 9
 
 void setup(){   
   pinMode(SENDING_LED_PIN, OUTPUT); // LED = output
 }
 
 void loop(){
-      digitalWrite(SENDING_LED_PIN, HIGH);
-      delay(250);
-      digitalWrite(SENDING_LED_PIN, LOW);
-      
-      K20D.shutterNow();
- }      
+//  digitalWrite(SENDING_LED_PIN, HIGH);
+//  delay(250);
+//  digitalWrite(SENDING_LED_PIN, LOW);
   
-  delay(60000); // 1 min delay between shots
+  EOS70D.shutterNow();      
+  
+  delay(2000);
 }
